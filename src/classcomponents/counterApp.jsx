@@ -18,7 +18,7 @@ class CounterApp extends React.Component{
  render(){
     return(<div style={{display:"flex"}} >
       <button onClick={this.decrement}>decrement</button>
-      <h1>count :{this.state.count}</h1>
+      <h1 >count :<span style={{color: this.state.count>=0?this.state.count>0?"green":"black":"red"}}>{this.state.count}</span></h1>
       <button onClick={this.increment}>increment</button>
     </div>)
  }
