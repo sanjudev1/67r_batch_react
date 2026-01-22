@@ -2,7 +2,7 @@ import React from "react"
 
 
 class CounterApp extends React.Component{
-    state={
+  state={
      count:0
     }
     increment=()=>{

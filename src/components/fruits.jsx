@@ -11,9 +11,9 @@ function Items(hand){
 
 
 function OrderList(hand){
-   console.log(hand.bowl)
+   console.log(hand.children)
     return(<ol>
-       <Items plate={hand.bowl}/>
+       <Items plate={hand.children.bowl}/>
     </ol>)
 }
 export default OrderList // default export
