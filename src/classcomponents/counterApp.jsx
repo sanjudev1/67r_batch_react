@@ -1,5 +1,6 @@
 import React from "react"
 import Child from "./child"
+import UserForm from "../components/userform"
 
 
 class CounterApp extends React.Component{
@@ -23,6 +24,7 @@ class CounterApp extends React.Component{
       <button onClick={this.decrement}>decrement</button>
       <h1 >count :<span style={{color: this.state.count>=0?this.state.count>0?"green":"black":"red"}}>{this.state.count}</span></h1>
       <button onClick={this.increment}>increment</button>
+      <UserForm/>
     </div>)
  }
 }

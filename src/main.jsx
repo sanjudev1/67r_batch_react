@@ -1,32 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { StrictMode } from 'react'
+import { createContext, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Layout from './components/layout'
-import OrderList from './components/fruits'
-import { UnOrderList} from './components/fruits'
-import CounterApp from './classcomponents/counterApp'
-import {Marchipoyanu as Sample} from './components/marchipoyanu'
-import Anr from './components/anr'
-import Nagarjuna from './components/nagarjuna'
+import { BrowserRouter,Routes,Route } from "react-router";
+import App from './App';
+import About from './components/about';
+import Home from './components/home';
+import NotFound from './components/NotFound';
+import Recipe from './components/recipe';
 
-import CustomCarousel from './classcomponents/customCorosuels'
-import CustomNavbar from './classcomponents/customheader';
-import Fetchproducts from './classcomponents/products';
-import TimeLine from './classcomponents/Timeline';
-import Counter from './components/counter';
-import DisplayProducts from './components/fakestoredata';
-import UserForm from './components/userform';
+export const Waiter = createContext()
+
 let fruits=["grapes","bananas","mangos","oranges","apples"]
 createRoot(document.getElementById('root')).render(
-  <div>
-   <CustomNavbar/>
-   <CustomCarousel/>
-   {/* <Fetchproducts/> */}
-   <UserForm/>
-   <CounterApp/>
-   <DisplayProducts/>
-   <TimeLine/>
-    {/* <Layout/> */}
-  </div>
-  
+ <Waiter value={{breakfast:"masadosa with kobbari chutney"}}>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/service" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
+      
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>,
+ </Waiter>
 )

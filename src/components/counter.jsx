@@ -1,4 +1,5 @@
 import { useState } from "react"
+import UserForm from "./userform"
 
 
 // component
@@ -18,6 +19,7 @@ let [count,setcount]=useState(0)
  <button className="btn btn-primary" onClick={decrement}>decrement</button>
  <h1>Count : {count}</h1>
  <button className="btn btn-warning" onClick={increment}>increment</button>
+ <UserForm a={count} b={setcount}/>
  </div>)
 }
 export default Counter

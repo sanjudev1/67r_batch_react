@@ -6,12 +6,13 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router';
 
 function CustomNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lifestyle_Stores_-_New.jpg/500px-Lifestyle_Stores_-_New.jpg" style={{width:"200px" ,height:"50px"}}/></Navbar.Brand>
+        <Navbar.Brand><Link to="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Lifestyle_Stores_-_New.jpg/500px-Lifestyle_Stores_-_New.jpg" style={{width:"200px" ,height:"50px"}}/></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,8 +20,8 @@ function CustomNavbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/about">about</Nav.Link>
+            <Nav.Link><Link to="/service">service</Link></Nav.Link>
+            <Nav.Link ><Link to="/about">about</Link></Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">

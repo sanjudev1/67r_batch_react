@@ -1,13 +1,18 @@
+import CustomCarousel from "./classcomponents/customCorosuels"
+import CustomNavbar from "./classcomponents/customheader"
+import TimeLine from "./classcomponents/Timeline"
+import Counter from "./components/counter"
+import DisplayProducts from "./components/fakestoredata"
 
 
 function App() {
   return (
     <>
-       <img src="https://media.geeksforgeeks.org/wp-content/uploads/20250807113919263513/qwer.webp"/>
-     <h1>react is a js library which is used to userInterface</h1>
-     <p>it has virtual dom </p>
-     <p>it has large community</p>
-     <p>it has component based architecture</p>
+     <CustomNavbar/>
+   <CustomCarousel/>
+   <Counter/>
+   <DisplayProducts/>
+   <TimeLine/>
     </>
   )
 }

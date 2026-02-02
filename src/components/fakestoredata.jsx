@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import CustomSpinner from "../classcomponents/customSpinner"
 import axios from "axios";
+import { Link } from "react-router";
 
 function DisplayProducts(){
     const [products,setproducts]=useState([])
@@ -18,7 +19,7 @@ function DisplayProducts(){
   return(<>
 
   {products.length>0?<>
-   {products.map(e=><img src={e.image} style={{width:"250px"}}/>)}
+   {products.map(e=><Link to={`recipe/${e.id}`}><img src={e.image} style={{width:"250px"}}/></Link>)}
   </>:<CustomSpinner/>}
   </>)
 }
