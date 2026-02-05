@@ -1,11 +1,14 @@
 import CustomCarousel from "../classcomponents/customCorosuels"
 import CustomNavbar from "../classcomponents/customheader"
+import { Customers } from "./Mandiusers"
 
-function Home(){
+
+function Cart(){
     return(<>
     <CustomNavbar/>
     <CustomCarousel/>
     This is home page
+    <Customers/>
     </>)
 }
-export default Home
+export default Cart

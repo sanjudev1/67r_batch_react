@@ -10,7 +10,6 @@ function App() {
     <>
      <CustomNavbar/>
    <CustomCarousel/>
-   <Counter/>
    <DisplayProducts/>
    <TimeLine/>
     </>

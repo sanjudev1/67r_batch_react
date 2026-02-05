@@ -8,6 +8,7 @@ function About(){
     <CustomNavbar/>
     <CustomCarousel/>
     This is about page
+    
     <Comp_1/>
    
     </>)
