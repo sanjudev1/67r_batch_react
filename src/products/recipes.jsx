@@ -16,7 +16,6 @@ export const RecipeSlice = createSlice({
         console.log("increment is triggerd",a.payload)
 
        const exisiting_item= state.menu_items.find(e=>e.id==a.payload.id)
-
        if(exisiting_item){
         state.menu_items.map((e,index)=>{
             if(e.id==exisiting_item.id){
@@ -27,8 +26,20 @@ export const RecipeSlice = createSlice({
        }
       
     },
-    decrement: (state) => {
-     
+    decrement: (state,a) => {
+     const exisiting_item= state.menu_items.find(e=>e.id==a.payload.id)
+       if(exisiting_item){
+        state.menu_items.map((e,index)=>{
+            if(e.id==exisiting_item.id){
+              if(e.count==1){
+                    state.menu_items.splice(index,1 )
+                
+              }else{
+
+                state.menu_items.splice(index,1,{...e,count:exisiting_item.count-1} )}
+              }
+        })
+       }
     },
     
   },
